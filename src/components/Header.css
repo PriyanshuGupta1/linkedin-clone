@@ -1,0 +1,43 @@
+.header
+{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    border-bottom: 0.1px solid lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.header_left
+{
+    display: flex;
+}
+.header_search
+{
+    margin-right: 10px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 20px;
+    color: gray;
+    background-color: #eef3f8;
+}
+.header_left > img{
+    object-fit:contain; /* preserve the aspect ratio of image */
+    height:40px;
+    margin-right: 10px;
+}
+.header_search >input{
+    outline: none;  /* will remove the blue box while writing  */
+    border: none;  /* removing border of the box */
+    background: none;
+}
+.header_right
+{
+    display: flex;
+    margin-right: 20px;
+}
