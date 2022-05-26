@@ -1,0 +1,44 @@
+.Post
+{
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.post_header{
+    display: flex;
+    margin-bottom: 10px;
+}
+.post_info{
+    margin-left: 10px;
+    width: 350px;
+}
+.post_info > p{
+    font-size: 12px;
+    color: gray;
+}
+.post_info > h2{
+    font-size: 18px;
+}
+.post_body{
+    overflow-wrap: anywhere;
+}
+.post_Follow{
+    display: flex;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: 500;
+    color: #0A6672;
+}
+.post_Follow:hover{
+    cursor: pointer;
+    background-color: #a2afbf;
+    color: #0A6672;
+    border-radius: 10px;
+}
+.post_buttons{
+    display: flex;
+    font-size: 15px;
+    justify-content: space-evenly;
+}
