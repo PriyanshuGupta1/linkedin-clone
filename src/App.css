@@ -2,9 +2,11 @@
   background-color: #f3f2ef;
   display: flex;
   flex-direction: column;
+  /* margin-left: 15px; */
   /* align-items: center; */
 
 }
 .app_body{
   display: flex;
+  margin-left: 15px;
 }

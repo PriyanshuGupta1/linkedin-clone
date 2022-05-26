@@ -1,5 +1,6 @@
 .header
 {
+    background-color: white;
     display: flex;
     /* flex-direction: row; */
     justify-content: space-evenly;
@@ -14,6 +15,7 @@
 .header_left
 {
     display: flex;
+    width: 50%;
 }
 .header_search
 {
@@ -25,19 +27,35 @@
     height: 20px;
     color: gray;
     background-color: #eef3f8;
+    
 }
 .header_left > img{
     object-fit:contain; /* preserve the aspect ratio of image */
     height:40px;
     margin-right: 10px;
+    margin-left: 20px;
 }
-.header_search >input{
+.setStyle1
+{
     outline: none;  /* will remove the blue box while writing  */
     border: none;  /* removing border of the box */
     background: none;
+    width: 200px;
+}
+.setStyle2{
+    outline: none;  /* will remove the blue box while writing  */
+    border: none;
+    width: 300px;
+    position: relative;
+    transition: 300ms;
+    background-color:#eef3f8 ;
 }
 .header_right
 {
     display: flex;
-    margin-right: 20px;
+    margin-left: 20px;
+    width: 50%;
+}
+.header_left > img:hover{
+    cursor: pointer;
 }
