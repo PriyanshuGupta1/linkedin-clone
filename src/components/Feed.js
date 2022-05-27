@@ -9,7 +9,10 @@ import Post from './Post'
 // import {} onSnapshot,collection} from "firebase/firestore";
 import { db} from "../firebase.js";
 import firebase from 'firebase/compat/app';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 function Feed() {
+  const user=useSelector(selectUser)
   const[input,setInput]=useState('')
   const [posts,setPosts]=useState([]);
   // //connecting to firebase
@@ -29,10 +32,10 @@ function Feed() {
     e.preventDefault();
     // Preventing the default behaviour
     db.collection('posts').add({
-      name:'Priyanshu Gupta',
-      description:'this is test',
+      name:user.displayName,
+      description:user.email,
       message: input,
-      photoUrl: ' ',
+      photoUrl: user.photoUrl || "",
       timestamp:firebase.firestore.FieldValue.serverTimestamp(),
     })
     setInput("");
