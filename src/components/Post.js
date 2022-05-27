@@ -7,17 +7,24 @@ import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
 import InputOption from './InputOption';
 function Post({name,description,message,photoUrl}) {
+    // const [follow,setFollow]=useState('+Follow')
+    // const setToFollow =()=>{
+    //     if(follow==='Un')
+    //         setFollow('Following')
+    //     else 
+    //         setFollow('Unfollowed') 
+    // }
     return (
     <div className='Post'> 
         <div className="post_header">
-            <Avatar />
+            <Avatar src={photoUrl}>{name[0]}</Avatar>
             <div className="post_info">
                 <h2>{name}</h2>
                 <p>{description}</p>
             </div>
-            <div className='post_Follow'>
-                    <p>+Follow</p>
-            </div>
+            {/* <div className='post_Follow' >
+                <button className='btn-follow' onClick={setToFollow} value={follow} ></button>
+            </div> */}
         </div>
         <div className="post_body">
             <p>{message}</p>
