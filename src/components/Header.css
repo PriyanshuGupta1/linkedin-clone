@@ -1,5 +1,7 @@
 .header
 {
+    position: sticky !important; 
+    top: 0;
     background-color: white;
     display: flex;
     /* flex-direction: row; */
@@ -8,9 +10,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 999;
 }
 .header_left
 {
@@ -53,8 +52,9 @@
 .header_right
 {
     display: flex;
-    margin-left: 20px;
     width: 50%;
+    align-items: center;
+    margin-left: 500px;
 }
 .header_left > img:hover{
     cursor: pointer;
