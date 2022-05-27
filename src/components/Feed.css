@@ -1,7 +1,7 @@
 .feed{
     flex:0.6;
     margin: 0 100px 0px 100px;
-    width: 400px;
+    width: 100%;
     box-sizing: border-box;
 }
 .feed_inputContainer{

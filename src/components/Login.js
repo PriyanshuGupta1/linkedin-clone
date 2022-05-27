@@ -59,7 +59,7 @@ function Login() {
               <input  value={name} onChange={e =>setName(e.target.value)} type="text" placeholder='Enter user ID'/>
               <input value={profilePic} onChange={e =>setProfilePic(e.target.value)}  type="text" placeholder='Profile picture URL(optional)' />
               <input value={email} onChange={e =>setEmail(e.target.value)} type="Email" placeholder='Email' />
-              <input value={password} onChange={e =>setPassword(e.target.value)} placeholder='Enter Password Here' type="password" />
+              <input  onChange={e =>setPassword(e.target.value)} placeholder='Enter Password Here' type="password" />
               <button type="submit" className ="login_Button" onClick={loginToApp}>Sign In</button>
         </form>
       <p>Not a member?{" "}</p><span className='login_register' onClick={register}>Register Now</span>

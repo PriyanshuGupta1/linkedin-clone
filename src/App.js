@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import Login from "./components/Login";
 import { auth } from "./firebase";
+import Widgets from "./components/Widgets";
 function App() {
   const user = useSelector(selectUser);
   const dispatch=useDispatch();
@@ -31,18 +32,21 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Header />
+    
       { !user ? (
         <Login/>
       ) : (
-        <div className="app_body">
-          <Sidebar />
-          <Feed />
-          {/* Widgets */}
-        </div>
+        <>
+          <div className="Head">
+            <Header />
+          </div>
+          <div className="app_body">
+              <Sidebar />
+              <Feed />
+              <Widgets />
+            </div>
+        </>
       )}
-      
-      {/* Widgets */}
     </div>
   );
 }
