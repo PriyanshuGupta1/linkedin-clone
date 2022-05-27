@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{forwardRef }from 'react'
 import { Avatar } from '@mui/material'
 import './Post.css'
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
@@ -6,7 +6,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
 import InputOption from './InputOption';
-function Post({name,description,message,photoUrl}) {
+const Post=forwardRef(({name,description,message,photoUrl},ref) =>{
     // const [follow,setFollow]=useState('+Follow')
     // const setToFollow =()=>{
     //     if(follow==='Un')
@@ -14,8 +14,9 @@ function Post({name,description,message,photoUrl}) {
     //     else 
     //         setFollow('Unfollowed') 
     // }
+
     return (
-    <div className='Post'> 
+    <div ref={ref} className='Post'> 
         <div className="post_header">
             <Avatar src={photoUrl}>{name[0]}</Avatar>
             <div className="post_info">
@@ -37,6 +38,6 @@ function Post({name,description,message,photoUrl}) {
             </div>
     </div>
   )
-}
+})
 
 export default Post

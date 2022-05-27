@@ -6,6 +6,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import YouTubeIcon from '@mui/icons-material/YouTube';import EventNoteIcon from '@mui/icons-material/EventNote';
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import Post from './Post'
+import FlipMove from 'react-flip-move';
 // import {} onSnapshot,collection} from "firebase/firestore";
 import { db} from "../firebase.js";
 import firebase from 'firebase/compat/app';
@@ -57,6 +58,7 @@ function Feed() {
               <InputOption Icon={CalendarViewDayIcon}title='Write Article' color='#7FC15E'/>
             </div>
         </div>
+        <FlipMove>
         {posts.map(({id,data:{name,description,message,photoUrl}}) =>(
           <Post 
           key={id}
@@ -66,6 +68,7 @@ function Feed() {
           photoUrl={photoUrl}
           />
         ))}
+        </FlipMove>
     </div>
   )
 }
