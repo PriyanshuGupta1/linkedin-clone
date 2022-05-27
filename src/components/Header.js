@@ -30,7 +30,7 @@ function Header() {
   return (
     <div className='header'>
         <div className="header_left">
-            <img src="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1653513853~hmac=05f9f87532f8a3282e9b102ba5091f8e" alt="Linekdin" />
+            <img src="https://brandlogos.net/wp-content/uploads/2016/06/linkedin-logo.png" alt="Linekdin" />
             <div className="header_search">
                 <SearchIcon/>
                 <input className={style} placeholder="Search" type="text" onClick={changeStyle1} onMouseLeave={changeStyle2}/>

@@ -2,7 +2,7 @@
   background-color: #f3f2ef;
   display: flex;
   flex-direction: column;
-  height: 750px;
+  height: fit-content;
 }
 .app_body{
   display: flex;
